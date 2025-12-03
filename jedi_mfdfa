@@ -1,0 +1,91 @@
+def jedi_mfdfa(data, scales, q_values, detrend_order=0):
+    n = len(data)
+    fluct = np.zeros((len(q_values), len(scales)))
+    rms_values = []
+    slopes = np.zeros(len(q_values))
+
+    for i in range(len(scales)):
+        s = scales[i]
+        segments = n // s
+        if segments < 2:
+            fluct[:, i] = np.nan
+            continue
+        rms = np.zeros(segments)
+        valid_segments = 0
+        for v in range(segments):
+            segment = data[v*s:(v+1)*s]
+            if len(segment) != s or np.std(segment) < 1e-10:
+                continue
+            x = np.arange(s, dtype=np.float64)
+            if detrend_order > 0:
+                try:
+                    coeffs = polyfit_linear(x, segment)
+                    trend = polyval_linear(coeffs, x)
+                    detrended = segment - trend
+                except:
+                    detrended = segment - np.sum(segment) / s
+            else:
+                detrended = segment - np.sum(segment) / s
+            sum_squares = 0.0
+            for j in range(s):
+                sum_squares += detrended[j]**2
+            rms_val = np.sqrt(sum_squares / s + 1e-12)
+            if rms_val > 1e-10:
+                rms[valid_segments] = rms_val
+                valid_segments += 1
+        if valid_segments < 2:
+            fluct[:, i] = np.nan
+            continue
+        rms = rms[:valid_segments]
+        rms_values.append(rms)
+        for j in range(len(q_values)):
+            q = q_values[j]
+            if q == 0:
+                sum_log = 0.0
+                count = 0
+                for k in range(valid_segments):
+                    if rms[k] > 1e-10:
+                        sum_log += np.log(rms[k]**2 + 1e-12)
+                        count += 1
+                fluct[j, i] = np.exp(0.5 * (sum_log / count)) if count > 0 else np.nan
+            else:
+                sum_power = 0.0
+                count = 0
+                for k in range(valid_segments):
+                    if rms[k] > 1e-10:
+                        sum_power += (rms[k] + 1e-12)**q
+                        count += 1
+                fluct[j, i] = (sum_power / count)**(1/q) if count > 0 else np.nan
+                if not np.isfinite(fluct[j, i]) or fluct[j, i] <= 0:
+                    fluct[j, i] = np.nan
+    valid_scales = np.sum(np.isfinite(fluct), axis=0)
+    if np.max(valid_scales) < 4:
+        return np.nan, np.full(len(q_values), np.nan), rms_values, fluct, slopes
+    for j in range(len(q_values)):
+        valid = np.isfinite(fluct[j, :]) & (fluct[j, :] > 0)
+        if np.sum(valid) < 4:
+            slopes[j] = np.nan
+            continue
+        coeffs = np.zeros(2)
+        X = np.log(scales[valid])
+        Y = np.log(fluct[j, valid] + 1e-12)
+        n_valid = len(X)
+        sum_x = np.sum(X)
+        sum_y = np.sum(Y)
+        sum_xy = np.sum(X * Y)
+        sum_x2 = np.sum(X * X)
+        denom = n_valid * sum_x2 - sum_x**2 + 1e-5
+        if abs(denom) > 1e-10:
+            coeffs[0] = (n_valid * sum_xy - sum_x * sum_y) / denom
+            coeffs[1] = (sum_y * sum_x2 - sum_x * sum_xy) / denom
+        slopes[j] = coeffs[0] if coeffs[0] > 0 else np.nan
+    hq = slopes
+    valid_hq = np.isfinite(hq)
+    if np.sum(valid_hq) >= 2:
+        tau = hq * q_values - 1
+        alpha = np.diff(tau[valid_hq]) / np.diff(q_values[valid_hq])
+        f_alpha = q_values[valid_hq][1:] * alpha - tau[valid_hq][1:]
+        D_f = np.nanmean(alpha) if np.isfinite(alpha).any() else np.nan
+    else:
+        D_f = np.nan
+    return D_f, hq, rms_values, fluct, slopes
