@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use UTMF-Core in your work, please cite the following paper."
+title: "UTMF-Core: A Unified Temporal-Measurement Framework for Heterogeneous Physical Time Series"
+authors:
+  - family-names: "Eversdijk"
+    given-names: "M."
+year: 2025
+doi: ""
+url: "https://github.com/Jedi-Markus-Strive/UTMF-CORE"
