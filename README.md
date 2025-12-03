@@ -131,74 +131,57 @@ except Exception as e:
 
 ---
 
-# Datasets Used in UTMF-CORE v1.0
 
-**Total size ~ 9.11 GB**
-Fully reproducible via public archives.
-
+## **All datasets used for UTMF v5.0 analysis listed below.** (Total 11.2GB) 
+#### - Direct downloadlinks.
+#### - For Colab: Create: /MyDrive/Datasets_UTMF/UTMF_outputs/
+#### - Place the datasets in folder: /Datasets_UTMF/
+#### - Mount Drive
+#### - Run UTMF v5.0
+#### - Results are returned in folder: /UTMF_outputs/
+-----
+- **[LIGO – GWOSC](https://gwosc.org/archive/links/O4a_16KHZ_R1/L1/1368195220/1389456018/simple/)**  
+  HDF5 strain files (e.g., `L-L1_GWOSC_O4a_16KHZ_R1-*.hdf5`).
+                                                           
+  **Datasets used in UTMF v5.0 configuration:**
+- `L-L1_GWOSC_O4a_16KHZ_R1-1384779776-4096.hdf5` [Download](https://gwosc.org/archive/data/O4a_16KHZ_R1/1384120320/L-L1_GWOSC_O4a_16KHZ_R1-1384779776-4096.hdf5) (486MB)
+- `L-L1_GWOSC_O4a_16KHZ_R1-1368350720-4096.hdf5` [Download](https://gwosc.org/archive/data/O4a_16KHZ_R1/1367343104/L-L1_GWOSC_O4a_16KHZ_R1-1368350720-4096.hdf5) (486MB)
+- `L-L1_GWOSC_O4a_16KHZ_R1-1370202112-4096.hdf5` [Download](https://gwosc.org/archive/data/O4a_16KHZ_R1/1369440256/L-L1_GWOSC_O4a_16KHZ_R1-1370202112-4096.hdf5) (486MB)
+- `L-L1_GWOSC_O4a_16KHZ_R1-1389420544-4096.hdf5` [Download](https://gwosc.org/archive/data/O4a_16KHZ_R1/1389363200/L-L1_GWOSC_O4a_16KHZ_R1-1389420544-4096.hdf5) (486MB)
 ---
+- **[Planck – ESA Archive](https://irsa.ipac.caltech.edu/data/Planck/release_3/all-sky-maps/)**  
+  FITS CMB maps (e.g., SMICA IQU maps such as `COM_CMB_IQU-smica_2048_R3.00_full.fits`).
 
-## 1. LIGO – GWOSC O4a
-
-Archive: [https://gwosc.org/archive/links/O4a_16KHZ_R1/](https://gwosc.org/archive/links/O4a_16KHZ_R1/)
-
-Files used:
-
-* `L-L1_GWOSC_O4a_16KHZ_R1-1384779776-4096.hdf5`
-* `L-L1_GWOSC_O4a_16KHZ_R1-1368350720-4096.hdf5`
-* `L-L1_GWOSC_O4a_16KHZ_R1-1370202112-4096.hdf5`
-* `L-L1_GWOSC_O4a_16KHZ_R1-1389420544-4096.hdf5`
-
+  **Datasets used in UTMF v5.0 configuration:**
+- `COM_CMB_IQU-smica-nosz_2048_R3.00_full.fits` [Download](https://irsa.ipac.caltech.edu/data/Planck/release_3/all-sky-maps/maps/component-maps/cmb/COM_CMB_IQU-smica-nosz_2048_R3.00_full.fits) (384MB)
+- `COM_CMB_IQU-smica_2048_R3.00_full.fits`      [Download](https://irsa.ipac.caltech.edu/data/Planck/release_3/all-sky-maps/maps/component-maps/cmb/COM_CMB_IQU-smica_2048_R3.00_full.fits) (1.88GB)
 ---
+- **[DESI – Data Release Portal](https://data.desi.lbl.gov/doc/releases/dr1/)**  
+  LRG FITS catalogs (e.g., `LRG_full.dat.fits`).
 
-## 2. Planck – SMICA CMB Maps
+  **Dataset used in UTMF v5.0 configuration:**
+- `LRG_full.dat.fits` [Download](https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.2/LRG_full.dat.fits) (2.77GB)
+---  
+- **[CERN Open Data](https://opendata.cern.ch/record/15007)**  
+  ROOT event files (e.g., `data_B.exactly2lep.root`).
 
-Archive: [https://irsa.ipac.caltech.edu/data/Planck/release_3/all-sky-maps/](https://irsa.ipac.caltech.edu/data/Planck/release_3/all-sky-maps/)
-
-Files:
-
-* `COM_CMB_IQU-smica-nosz_2048_R3.00_full.fits`
-* `COM_CMB_IQU-smica_2048_R3.00_full.fits`
-
+  **Dataset used in UTMF v5.0 configuration:**
+- `data_B.exactly2lep.root` [Download:](https://opendata.cern.ch/record/15007/files/data_B.exactly2lep.root) (451MB)
 ---
-
-## 3. DESI – DR1 LRG Catalog
-
-Dataset:
-[https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.2/LRG_full.dat.fits](https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.2/LRG_full.dat.fits)
-
+- **[Gaia Archive (DR3)](https://vizier.cds.unistra.fr/viz-bin/VizieR-4)**  
+  Source catalogs in TSV format (e.g., `gaia_dr3.tsv`).                                                                 
+  **Dataset used in UTMF v5.0:**                                                                                      
+      **Select:**                                                                                                       
+        1- 'gaiadr3'                                                                                                    
+        2. Table: `I/355/gaiadr3`  
+        3. Rows: `1-999999`  
+        4. Format: Tab-Separated Values  
+        5. Columns: All                                                                                
+        6. Rename file to 'gaia_dr3' or update path in config.                                                          
 ---
-
-## 4. CERN – ATLAS Two-Lepton Events
-
-Record: [https://opendata.cern.ch/record/15007](https://opendata.cern.ch/record/15007)
-
-File:
-
-* `data_B.exactly2lep.root`
-
+- **[ANU Quantum Random Numbers (QRNG)](https://qrng.anu.edu.au/)**  
+  API-based quantum random sequences (no download required, incorporated in UTMF v5.0 configuration).
 ---
-
-## 5. Gaia – DR3 (TSV via VizieR)
-
-Start: [https://vizier.cds.unistra.fr/viz-bin/VizieR-4](https://vizier.cds.unistra.fr/viz-bin/VizieR-4)
-
-Select:
-
-* Catalogue: `gaiadr3`
-* Table: `I/355/gaiadr3`
-* Rows: `1–999999`
-* Format: TSV
-* Columns: All
-* Save as: `gaia_dr3.tsv`
-
----
-
-## 6. ANU Quantum Random Numbers (QRNG)
-
-API: [https://qrng.anu.edu.au/](https://qrng.anu.edu.au/)
-
-Used directly by the loader; no manual download needed.
 
 ---
 
