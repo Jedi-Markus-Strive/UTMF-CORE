@@ -79,7 +79,7 @@ Below is the 2×3 collage summarizing the stability patterns across all datasets
 - `QRNG.png`  
 
 These correspond exactly to the six domains evaluated in the paper and match
-the JSON metadata output stored in UTMF-CORE runs.
+the metadata output stored in UTMF-CORE runs.
 
 ---
 
