@@ -132,18 +132,18 @@ except Exception as e:
 ---
 
 
-## **All datasets used for UTMF v5.0 analysis listed below.** (Total 11.2GB) 
+## **All datasets used for UTMF-CORE v1.0.0 analysis listed below.** (Total 9.8GB) 
 #### - Direct downloadlinks.
 #### - For Colab: Create: /MyDrive/Datasets_UTMF/UTMF_outputs/
 #### - Place the datasets in folder: /Datasets_UTMF/
 #### - Mount Drive
-#### - Run UTMF v5.0
+#### - Run UTMF-CORE v1.0.0
 #### - Results are returned in folder: /UTMF_outputs/
 -----
 - **[LIGO – GWOSC](https://gwosc.org/archive/links/O4a_16KHZ_R1/L1/1368195220/1389456018/simple/)**  
   HDF5 strain files (e.g., `L-L1_GWOSC_O4a_16KHZ_R1-*.hdf5`).
                                                            
-  **Datasets used in UTMF v5.0 configuration:**
+  **Datasets used in UTMF-CORE v1.0.0 configuration:**
 - `L-L1_GWOSC_O4a_16KHZ_R1-1384779776-4096.hdf5` [Download](https://gwosc.org/archive/data/O4a_16KHZ_R1/1384120320/L-L1_GWOSC_O4a_16KHZ_R1-1384779776-4096.hdf5) (486MB)
 - `L-L1_GWOSC_O4a_16KHZ_R1-1368350720-4096.hdf5` [Download](https://gwosc.org/archive/data/O4a_16KHZ_R1/1367343104/L-L1_GWOSC_O4a_16KHZ_R1-1368350720-4096.hdf5) (486MB)
 - `L-L1_GWOSC_O4a_16KHZ_R1-1370202112-4096.hdf5` [Download](https://gwosc.org/archive/data/O4a_16KHZ_R1/1369440256/L-L1_GWOSC_O4a_16KHZ_R1-1370202112-4096.hdf5) (486MB)
@@ -152,25 +152,25 @@ except Exception as e:
 - **[Planck – ESA Archive](https://irsa.ipac.caltech.edu/data/Planck/release_3/all-sky-maps/)**  
   FITS CMB maps (e.g., SMICA IQU maps such as `COM_CMB_IQU-smica_2048_R3.00_full.fits`).
 
-  **Datasets used in UTMF v5.0 configuration:**
+  **Datasets used in UTMF-CORE v1.0.0 configuration:**
 - `COM_CMB_IQU-smica-nosz_2048_R3.00_full.fits` [Download](https://irsa.ipac.caltech.edu/data/Planck/release_3/all-sky-maps/maps/component-maps/cmb/COM_CMB_IQU-smica-nosz_2048_R3.00_full.fits) (384MB)
 - `COM_CMB_IQU-smica_2048_R3.00_full.fits`      [Download](https://irsa.ipac.caltech.edu/data/Planck/release_3/all-sky-maps/maps/component-maps/cmb/COM_CMB_IQU-smica_2048_R3.00_full.fits) (1.88GB)
 ---
 - **[DESI – Data Release Portal](https://data.desi.lbl.gov/doc/releases/dr1/)**  
   LRG FITS catalogs (e.g., `LRG_full.dat.fits`).
 
-  **Dataset used in UTMF v5.0 configuration:**
+  **Dataset used in UTMF-CORE v1.0.0 configuration:**
 - `LRG_full.dat.fits` [Download](https://data.desi.lbl.gov/public/dr1/survey/catalogs/dr1/LSS/iron/LSScats/v1.2/LRG_full.dat.fits) (2.77GB)
 ---  
 - **[CERN Open Data](https://opendata.cern.ch/record/15007)**  
   ROOT event files (e.g., `data_B.exactly2lep.root`).
 
-  **Dataset used in UTMF v5.0 configuration:**
+  **Dataset used in UTMF-CORE v1.0.0 configuration:**
 - `data_B.exactly2lep.root` [Download:](https://opendata.cern.ch/record/15007/files/data_B.exactly2lep.root) (451MB)
 ---
 - **[Gaia Archive (DR3)](https://vizier.cds.unistra.fr/viz-bin/VizieR-4)**  
   Source catalogs in TSV format (e.g., `gaia_dr3.tsv`).                                                                 
-  **Dataset used in UTMF v5.0:**                                                                                      
+  **Dataset used in UTMF-CORE v1.0.0:**                                                                                      
       **Select:**                                                                                                       
         1- 'gaiadr3'                                                                                                    
         2. Table: `I/355/gaiadr3`  
@@ -180,7 +180,7 @@ except Exception as e:
         6. Rename file to 'gaia_dr3' or update path in config.                                                          
 ---
 - **[ANU Quantum Random Numbers (QRNG)](https://qrng.anu.edu.au/)**  
-  API-based quantum random sequences (no download required, incorporated in UTMF v5.0 configuration).
+  API-based quantum random sequences (no download required, incorporated in UTMF-CORE v1.0.0 configuration).
 ---
 
 ---
