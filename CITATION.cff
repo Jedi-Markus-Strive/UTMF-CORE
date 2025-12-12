@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use UTMF-Core in your work, please cite the following paper."
+message: "If you use UTMF-Core or jedi_mfdfa in your work, please cite the following paper."
 title: "UTMF-Core: A Universal Multifractal Measurement Framework for Heterogeneous Physical Time Series."
 authors:
   - family-names: "Eversdijk"
