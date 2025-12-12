@@ -78,8 +78,7 @@ Below is the 2×3 collage summarizing the stability patterns across all datasets
 - `Gaia_DR3.png`  
 - `QRNG.png`  
 
-These correspond exactly to the six domains evaluated in the paper and match
-the metadata output stored in UTMF-CORE runs.
+These correspond exactly to the three domains evaluated in the paper plus three extra evaluations.
 
 ---
 
@@ -102,5 +101,5 @@ The result visually confirms the key claim:
 ---
 
 If you use these plots in publications or presentations,  
-please cite UTMF-CORE (see main repository `README.md`).
+please cite UTMF-CORE (see main repository `CITATION.cff`).
 
