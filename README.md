@@ -5,8 +5,8 @@
 This repository accompanies the paper:
 
 > **M. Eversdijk (2025).**
-> *UTMF-Core: A Unified Temporal-Measurement Framework for Heterogeneous Physical Time Series.*
-> (Preprint, forthcoming on arXiv)
+> *UTMF-Core: A Universal Multifractal Measurement Framework for Heterogeneous Physical Time Serie*
+> Zenodo preprint DOI: https://doi.org/10.5281/zenodo.17905073
 
 ---
 
